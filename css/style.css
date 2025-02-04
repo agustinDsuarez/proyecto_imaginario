@@ -1,0 +1,214 @@
+/*fuentes*/
+@font-face {
+    font-family: roc-grotesk;
+    src: url(fuentes/roc-grotesk-regular.otf);
+  }
+
+:root{
+    /*colores*/
+    --lila: #8e59ff;
+	--naranja: #f66d3e;
+	--ocre: #c07c7a;
+	--verde: #2c805f;
+	--amarilloclaro: #f9fdd6;
+	--amarilloresaltado: #f9ff54;
+	--cremita: #f9fdd6;
+	--amarillo: #f9ff54;
+	--azuloscuro: #1d1794;
+	--azul2: #0072ef;
+	--rosa: #c07c7a;
+	--rojo: #c13708;
+	--rojomov: #ad2800;
+	--verdemov: #c5eec7;
+	--gris: #727272;
+	--amarilloc: #fdf9b0;
+	--naranjac: #d68b5c;
+	--azulc: #aab4ee;
+	--verdec: #a3c8a7;
+	--violetac: #f2dfee;
+	--grisc: #c4c4c4;
+	--grismuyclaro: #f0f0f0;
+	--grismedio: #565656;
+	--grisoscuro: #323232;
+	--beige:#e2d8d6;
+	--azulila: #5875ff;
+	--rosaarca: #d80086;
+	--colortuneles: #ff6d00;
+	--colorsalto: #00B504;
+
+    /*fuentes*/
+    --ff-primaria: 'roc-grotesk' , sans-serif;
+}
+
+/*reset*
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* estilos generales */
+
+body {
+    font-family: var(--ff-primaria);
+}
+
+.primary-header{
+  width: 100%;
+  margin-bottom: .4em;
+}
+
+.logo_header {
+  width: 200px;
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.menu_lista {
+  display: flex;
+  gap: 2em;
+  margin-bottom: .7em;
+  font-size: 0.95em;
+}
+
+.menu_lista a {
+  color: var(--gris);
+  text-decoration: none;
+  transition: all 0.4s ease-in-out 0s;
+  border-bottom: solid 1px #FFFFFF
+}
+
+.menu_lista a:hover:not(#activo) {
+  color: black;
+  border-bottom: 25px solid var(--grisc);
+}
+
+.activo a {
+  color: black;
+  border-bottom: 32px solid var(--amarilloclaro);
+}
+
+/* secciones */
+
+.seccion_uno {
+  width: 100%;
+  height: 100%;
+  background-color: var(--azul2);
+  
+}
+
+.contenido_seccion_uno {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.presentacion {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}
+
+.info {
+  grid-column: 2 / 4;
+  grid-row: 1 / 4;
+
+  background-color: white;
+  padding: 2em;
+  margin: 1em;
+  width: 100%;
+}
+
+.fechas_importantes {
+  background-color: var(--amarillo);
+}
+
+
+
+
+
+/* clases de utilidad */
+.contenedor {
+	width: 1200px;
+	max-width: 90%;
+	margin: auto;
+	/*overflow: hidden;*/
+	position: relative;
+}
+
+.invisible {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
